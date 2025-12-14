@@ -7,299 +7,322 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Efeito de brilho customizado */
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+        }
+        .neon-text {
+            text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+        }
+    </style>
 </head>
-<body class="font-sans bg-gray-50">
-    <!-- Alert Bar -->
-    <div class="bg-red-600 text-white text-center py-2 px-4 font-bold">
-        <div class="container mx-auto flex justify-center items-center">
-            <i data-feather="alert-triangle" class="mr-2"></i>
-            <span id="urgency-text">⚠️ ATENÇÃO: ESTA OFERTA ENCERRA HOJE, <span id="current-date"></span>. Você tem <span id="countdown" class="font-mono">10:00</span> para garantir o acesso vitalício por esse preço.</span>
+<body class="font-sans bg-black text-gray-300">
+    <div class="bg-[#1a0b2e] border-b border-purple-500/30 text-white text-center py-2 px-4 font-bold">
+        <div class="container mx-auto flex justify-center items-center text-sm md:text-base">
+            <i data-feather="alert-triangle" class="mr-2 text-yellow-400"></i>
+            <span id="urgency-text">⚠️ ATENÇÃO: ESTA OFERTA ENCERRA HOJE, <span id="current-date" class="text-purple-300"></span>. Você tem <span id="countdown" class="font-mono text-fuchsia-400">10:00</span> para garantir o acesso vitalício.</span>
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="py-16 px-4 text-center bg-gradient-to-r from-blue-900 to-blue-700 text-white">
-        <div class="container mx-auto max-w-4xl">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">PARE DE JOGAR DINHEIRO FORA COM HOSPEDAGEM MENSAL</h1>
-            <h2 class="text-xl md:text-2xl mb-8">Descubra o método simples para hospedar Múltiplos Sites e Landing Pages de Forma Ilimitada, com Domínio Personalizado e Custo Zero Para Sempre</h2>
+    <section class="py-20 px-4 text-center bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-cover relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-purple-950/40 to-black z-0"></div>
+        
+        <div class="container mx-auto max-w-4xl relative z-10">
+            <h1 class="text-4xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-300 to-purple-400 neon-text leading-tight">
+                PARE DE JOGAR DINHEIRO FORA COM HOSPEDAGEM MENSAL
+            </h1>
+            <h2 class="text-xl md:text-2xl mb-10 text-gray-300 font-light">
+                Descubra o método simples para hospedar Múltiplos Sites e Landing Pages de Forma <span class="text-purple-400 font-bold">Ilimitada</span>, com Domínio Personalizado e <span class="text-purple-400 font-bold">Custo Zero</span> Para Sempre
+            </h2>
             
-            <div class="aspect-w-16 aspect-h-9 mb-8">
-                <iframe class="w-full h-64 md:h-96" src="https://www.youtube.com/embed/6oiDmWQxCE0?si=c53oO1XVcFrENuIB" frameborder="0" allowfullscreen></iframe>
+            <div class="aspect-w-16 aspect-h-9 mb-10 p-1 bg-gradient-to-r from-purple-600 to-fuchsia-600 rounded-lg shadow-[0_0_30px_rgba(147,51,234,0.3)]">
+                <iframe class="w-full h-64 md:h-96 rounded bg-black" src="https://www.youtube.com/embed/6oiDmWQxCE0?si=c53oO1XVcFrENuIB" frameborder="0" allowfullscreen></iframe>
             </div>
             
-            <a href="#offer" class="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg animate-pulse inline-block">
-                SIM! QUERO ME LIVRAR DAS MENSALIDADES DE HOSPEDAGEM AGORA
+            <a href="#offer" class="group relative bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-bold py-5 px-10 rounded-full text-lg shadow-[0_0_20px_rgba(192,38,211,0.6)] hover:shadow-[0_0_30px_rgba(192,38,211,0.8)] transition-all duration-300 inline-flex items-center">
+                SIM! QUERO ME LIVRAR DAS MENSALIDADES
+                <i data-feather="arrow-right" class="ml-2 group-hover:translate-x-1 transition-transform"></i>
             </a>
         </div>
     </section>
 
-    <!-- What You'll Learn -->
-    <section class="py-16 px-4 bg-white">
+    <section class="py-16 px-4 bg-[#0a0a0a] border-t border-purple-900/20">
         <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl font-bold text-center mb-12">Você não precisa ser programador para ter um site profissional no ar em minutos</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
+                Você não precisa ser programador para ter um <span class="text-purple-500">site profissional</span>
+            </h2>
             
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="flex items-start">
-                    <div class="bg-blue-100 p-3 rounded-full mr-4">
-                        <i data-feather="cpu" class="text-blue-600"></i>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="flex items-start p-4 hover:bg-white/5 rounded-xl transition-colors duration-300">
+                    <div class="bg-purple-900/30 p-3 rounded-lg mr-4 border border-purple-500/30">
+                        <i data-feather="cpu" class="text-purple-400"></i>
                     </div>
                     <div>
-                        <h3 class="font-bold text-lg mb-2">Criação Automática com IA</h3>
-                        <p class="text-gray-700">Como criar páginas inteiras, de alta conversão (como esta), utilizando apenas Inteligência Artificial.</p>
+                        <h3 class="font-bold text-xl mb-2 text-white">Criação Automática com IA</h3>
+                        <p class="text-gray-400">Como criar páginas inteiras, de alta conversão (como esta), utilizando apenas Inteligência Artificial.</p>
                     </div>
                 </div>
                 
-                <div class="flex items-start">
-                    <div class="bg-blue-100 p-3 rounded-full mr-4">
-                        <i data-feather="lock" class="text-blue-600"></i>
+                <div class="flex items-start p-4 hover:bg-white/5 rounded-xl transition-colors duration-300">
+                    <div class="bg-purple-900/30 p-3 rounded-lg mr-4 border border-purple-500/30">
+                        <i data-feather="lock" class="text-purple-400"></i>
                     </div>
                     <div>
-                        <h3 class="font-bold text-lg mb-2">A Caixa Preta da Hospedagem</h3>
-                        <p class="text-gray-700">O segredo para hospedar seus sites de forma vitalícia e 100% grátis.</p>
+                        <h3 class="font-bold text-xl mb-2 text-white">A Caixa Preta da Hospedagem</h3>
+                        <p class="text-gray-400">O segredo para hospedar seus sites de forma vitalícia e 100% grátis.</p>
                     </div>
                 </div>
                 
-                <div class="flex items-start">
-                    <div class="bg-blue-100 p-3 rounded-full mr-4">
-                        <i data-feather="upload" class="text-blue-600"></i>
+                <div class="flex items-start p-4 hover:bg-white/5 rounded-xl transition-colors duration-300">
+                    <div class="bg-purple-900/30 p-3 rounded-lg mr-4 border border-purple-500/30">
+                        <i data-feather="upload" class="text-purple-400"></i>
                     </div>
                     <div>
-                        <h3 class="font-bold text-lg mb-2">Seu Primeiro Site no Ar</h3>
-                        <p class="text-gray-700">Passo a passo, clique a clique, para subir sua primeira página hoje mesmo.</p>
+                        <h3 class="font-bold text-xl mb-2 text-white">Seu Primeiro Site no Ar</h3>
+                        <p class="text-gray-400">Passo a passo, clique a clique, para subir sua primeira página hoje mesmo.</p>
                     </div>
                 </div>
                 
-                <div class="flex items-start">
-                    <div class="bg-blue-100 p-3 rounded-full mr-4">
-                        <i data-feather="globe" class="text-blue-600"></i>
+                <div class="flex items-start p-4 hover:bg-white/5 rounded-xl transition-colors duration-300">
+                    <div class="bg-purple-900/30 p-3 rounded-lg mr-4 border border-purple-500/30">
+                        <i data-feather="globe" class="text-purple-400"></i>
                     </div>
                     <div>
-                        <h3 class="font-bold text-lg mb-2">Domínios Gratuitos</h3>
-                        <p class="text-gray-700">Como configurar um endereço web sem pagar nada por isso.</p>
+                        <h3 class="font-bold text-xl mb-2 text-white">Domínios Gratuitos</h3>
+                        <p class="text-gray-400">Como configurar um endereço web sem pagar nada por isso.</p>
                     </div>
                 </div>
                 
-                <div class="flex items-start">
-                    <div class="bg-blue-100 p-3 rounded-full mr-4">
-                        <i data-feather="star" class="text-blue-600"></i>
+                <div class="flex items-start p-4 hover:bg-white/5 rounded-xl transition-colors duration-300">
+                    <div class="bg-purple-900/30 p-3 rounded-lg mr-4 border border-purple-500/30">
+                        <i data-feather="star" class="text-purple-400"></i>
                     </div>
                     <div>
-                        <h3 class="font-bold text-lg mb-2">Domínios Profissionais (.com.br)</h3>
-                        <p class="text-gray-700">Já tem um domínio pago? Te ensino a conectar ele na hospedagem gratuita para ter autoridade máxima.</p>
+                        <h3 class="font-bold text-xl mb-2 text-white">Domínios Profissionais (.com.br)</h3>
+                        <p class="text-gray-400">Já tem um domínio pago? Te ensino a conectar ele na hospedagem gratuita para ter autoridade máxima.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Profit Potential -->
-    <section class="py-16 px-4 bg-gray-100">
+    <section class="py-16 px-4 bg-gradient-to-b from-black to-[#11051F]">
         <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="text-3xl font-bold mb-8">Transforme esse conhecimento em uma Máquina de Renda Recorrente</h2>
-            <p class="text-xl mb-8">Não é apenas sobre economizar. É sobre lucrar. Com esse método, você pode cobrar mensalidades de clientes sem ter custo nenhum com servidores.</p>
+            <h2 class="text-3xl font-bold mb-8 text-white">Transforme esse conhecimento em uma <br><span class="text-fuchsia-500">Máquina de Renda Recorrente</span></h2>
+            <p class="text-xl mb-8 text-gray-300">Não é apenas sobre economizar. É sobre lucrar. Com esse método, você pode cobrar mensalidades de clientes sem ter custo nenhum com servidores.</p>
             
-            <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
-                <h3 class="text-2xl font-bold mb-4 text-blue-700">A Matemática do Lucro:</h3>
-                <ul class="text-left space-y-4 mb-6">
-                    <li class="flex items-center">
-                        <i data-feather="check-circle" class="text-green-500 mr-2"></i>
+            <div class="bg-gray-900 border border-purple-500/20 p-8 rounded-2xl shadow-[0_0_40px_rgba(88,28,135,0.2)] max-w-2xl mx-auto relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mt-10 -mr-10 w-32 h-32 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+
+                <h3 class="text-2xl font-bold mb-6 text-purple-400">A Matemática do Lucro:</h3>
+                <ul class="text-left space-y-4 mb-8">
+                    <li class="flex items-center text-gray-200">
+                        <i data-feather="check-circle" class="text-emerald-400 mr-3"></i>
                         Você consegue 10 clientes (fácil para iniciantes)
                     </li>
-                    <li class="flex items-center">
-                        <i data-feather="check-circle" class="text-green-500 mr-2"></i>
-                        Cobra apenas R$ 100,00/mês para manter o site deles no ar
+                    <li class="flex items-center text-gray-200">
+                        <i data-feather="check-circle" class="text-emerald-400 mr-3"></i>
+                        Cobra apenas R$ 100,00/mês para manter o site
                     </li>
-                    <li class="flex items-center">
-                        <i data-feather="check-circle" class="text-green-500 mr-2"></i>
-                        Seu Custo: R$ 0,00
+                    <li class="flex items-center text-gray-200">
+                        <i data-feather="check-circle" class="text-emerald-400 mr-3"></i>
+                        Seu Custo: <span class="text-white font-bold ml-1">R$ 0,00</span>
                     </li>
-                    <li class="flex items-center">
-                        <i data-feather="check-circle" class="text-green-500 mr-2"></i>
-                        Seu Lucro: R$ 1.000,00 TODOS OS MESES no seu bolso
+                    <li class="flex items-center text-white font-bold text-lg">
+                        <i data-feather="check-circle" class="text-emerald-400 mr-3"></i>
+                        Seu Lucro: R$ 1.000,00 TODOS OS MESES
                     </li>
                 </ul>
-                <p class="text-lg font-semibold">E isso é só o começo! Com mais clientes, seu faturamento escala sem custos adicionais.</p>
+                <p class="text-lg font-semibold text-purple-200">E isso é só o começo! Com mais clientes, seu faturamento escala sem custos adicionais.</p>
             </div>
         </div>
     </section>
 
-    <!-- Proof Section -->
-    <section class="py-16 px-4 bg-white">
+    <section class="py-16 px-4 bg-[#0a0a0a]">
         <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="text-3xl font-bold mb-8">Eu vivo o que eu ensino</h2>
-            <p class="text-xl mb-12">Veja como eu faturei + de R$ 200.000,00 apenas vendendo hospedagem e sites utilizando exatamente a estratégia que vou te entregar</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="story-image">
-                    <img src="http://static.photos/finance/640x360/1" alt="Comprovante de faturamento 1" class="w-full h-64 object-cover rounded-lg">
-                </div>
-                <div class="story-image">
-                    <img src="http://static.photos/finance/640x360/2" alt="Comprovante de faturamento 2" class="w-full h-64 object-cover rounded-lg">
-                </div>
-                <div class="story-image">
-                    <img src="http://static.photos/finance/640x360/3" alt="Comprovante de faturamento 3" class="w-full h-64 object-cover rounded-lg">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="py-16 px-4 bg-gray-100">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl font-bold text-center mb-12">Quem aplica, tem resultado. Veja o que dizem:</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <div class="flex items-center mb-4">
-                        <img src="http://static.photos/people/200x200/1" alt="Depoimento 1" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-bold">Carlos Silva</h4>
-                            <div class="flex text-yellow-400">
-                                <i data-feather="star" class="fill-current"></i>
-                                <i data-feather="star" class="fill-current"></i>
-                                <i data-feather="star" class="fill-current"></i>
-                                <i data-feather="star" class="fill-current"></i>
-                                <i data-feather="star" class="fill-current"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p>"Em 2 semanas já tinha 5 clientes pagando mensalidade. O curso mudou minha vida financeira!"</p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <div class="flex items-center mb-4">
-                        <img src="http://static.photos/people/200x200/2" alt="Depoimento 2" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-bold">Ana Paula</h4>
-                            <div class="flex text-yellow-400">
-                                <i data-feather="star" class="fill-current"></i>
-                                <i data-feather="star" class="fill-current"></i>
-                                <i data-feather="star" class="fill-current"></i>
-                                <i data-feather="star" class="fill-current"></i>
-                                <i data-feather="star" class="fill-current"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p>"Nunca imaginei que poderia criar sites sem saber programação. Agora tenho uma renda extra fixa."</p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <div class="flex items-center mb-4">
-                        <img src="http://static.photos/people/200x200/3" alt="Depoimento 3" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-bold">Roberto Almeida</h4>
-                            <div class="flex text-yellow-400">
-                                <i data-feather="star" class="fill-current"></i>
-                                <i data-feather="star" class="fill-current"></i>
-                                <i data-feather="star" class="fill-current"></i>
-                                <i data-feather="star" class="fill-current"></i>
-                                <i data-feather="star" class="fill-current"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p>"O módulo de domínios gratuitos sozinho já valeu o investimento. Recomendo demais!"</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Gallery -->
-    <section class="py-16 px-4 bg-white">
-        <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="text-3xl font-bold mb-12">Qualquer tipo de projeto. Sem limites.</h2>
+            <h2 class="text-3xl font-bold mb-8 text-white">Eu vivo o que eu ensino</h2>
+            <p class="text-xl mb-12 text-gray-400">Veja como eu faturei + de R$ 200.000,00 apenas vendendo hospedagem e sites utilizando exatamente a estratégia que vou te entregar</p>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="image-hover-container">
-                    <img src="http://static.photos/technology/640x360/1" alt="Loja Virtual" class="image-hover w-full h-64 object-cover rounded-lg">
-                    <p class="mt-2 font-medium">Loja Virtual</p>
+                <div class="story-image bg-gray-800 rounded-lg p-1 border border-gray-700">
+                    <img src="http://static.photos/finance/640x360/1" alt="Comprovante de faturamento 1" class="w-full h-48 object-cover rounded bg-black opacity-80 hover:opacity-100 transition-opacity">
                 </div>
-                <div class="image-hover-container">
-                    <img src="http://static.photos/technology/640x360/2" alt="Landing Page" class="image-hover w-full h-64 object-cover rounded-lg">
-                    <p class="mt-2 font-medium">Landing Page</p>
+                <div class="story-image bg-gray-800 rounded-lg p-1 border border-gray-700">
+                    <img src="http://static.photos/finance/640x360/2" alt="Comprovante de faturamento 2" class="w-full h-48 object-cover rounded bg-black opacity-80 hover:opacity-100 transition-opacity">
                 </div>
-                <div class="image-hover-container">
-                    <img src="http://static.photos/technology/640x360/3" alt="Painel de Controle" class="image-hover w-full h-64 object-cover rounded-lg">
-                    <p class="mt-2 font-medium">Painel de Controle</p>
+                <div class="story-image bg-gray-800 rounded-lg p-1 border border-gray-700">
+                    <img src="http://static.photos/finance/640x360/3" alt="Comprovante de faturamento 3" class="w-full h-48 object-cover rounded bg-black opacity-80 hover:opacity-100 transition-opacity">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Offer Section -->
-    <section id="offer" class="py-16 px-4 bg-blue-900 text-white">
-        <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="text-3xl font-bold mb-4">Acesso VITALÍCIO ao Método Completo</h2>
-            <p class="text-xl mb-8">Esqueça mensalidades. Você paga uma vez (valor de um lanche) e economiza milhares de reais pro resto da vida.</p>
+    <section class="py-16 px-4 bg-black border-y border-gray-900">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Quem aplica, tem resultado.</h2>
             
-            <div class="bg-white text-gray-800 p-8 rounded-lg shadow-2xl max-w-md mx-auto">
-                <div class="text-5xl font-bold text-blue-700 mb-2">R$ 24,99</div>
-                <div class="text-lg line-through mb-6">De: R$ 97,00</div>
-                <p class="mb-6">(Pagamento Único - Acesso Imediato)</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-purple-500/50 transition-all">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/200x200/1" alt="Depoimento 1" class="w-12 h-12 rounded-full mr-4 border-2 border-purple-500">
+                        <div>
+                            <h4 class="font-bold text-white">Carlos Silva</h4>
+                            <div class="flex text-purple-400">
+                                <i data-feather="star" class="fill-current w-4 h-4"></i>
+                                <i data-feather="star" class="fill-current w-4 h-4"></i>
+                                <i data-feather="star" class="fill-current w-4 h-4"></i>
+                                <i data-feather="star" class="fill-current w-4 h-4"></i>
+                                <i data-feather="star" class="fill-current w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Em 2 semanas já tinha 5 clientes pagando mensalidade. O curso mudou minha vida financeira!"</p>
+                </div>
                 
-                <a href="#" class="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg inline-block w-full">
-                    QUERO GARANTIR MINHA VAGA POR R$ 24,99
+                <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-purple-500/50 transition-all">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/200x200/2" alt="Depoimento 2" class="w-12 h-12 rounded-full mr-4 border-2 border-purple-500">
+                        <div>
+                            <h4 class="font-bold text-white">Ana Paula</h4>
+                            <div class="flex text-purple-400">
+                                <i data-feather="star" class="fill-current w-4 h-4"></i>
+                                <i data-feather="star" class="fill-current w-4 h-4"></i>
+                                <i data-feather="star" class="fill-current w-4 h-4"></i>
+                                <i data-feather="star" class="fill-current w-4 h-4"></i>
+                                <i data-feather="star" class="fill-current w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Nunca imaginei que poderia criar sites sem saber programação. Agora tenho uma renda extra fixa."</p>
+                </div>
+                
+                <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-purple-500/50 transition-all">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/200x200/3" alt="Depoimento 3" class="w-12 h-12 rounded-full mr-4 border-2 border-purple-500">
+                        <div>
+                            <h4 class="font-bold text-white">Roberto Almeida</h4>
+                            <div class="flex text-purple-400">
+                                <i data-feather="star" class="fill-current w-4 h-4"></i>
+                                <i data-feather="star" class="fill-current w-4 h-4"></i>
+                                <i data-feather="star" class="fill-current w-4 h-4"></i>
+                                <i data-feather="star" class="fill-current w-4 h-4"></i>
+                                <i data-feather="star" class="fill-current w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"O módulo de domínios gratuitos sozinho já valeu o investimento. Recomendo demais!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-[#0a0a0a]">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl font-bold mb-12 text-white">Qualquer tipo de projeto. <span class="text-purple-500">Sem limites.</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="image-hover-container group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg border border-purple-900/50">
+                        <img src="http://static.photos/technology/640x360/1" alt="Loja Virtual" class="image-hover w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-purple-900/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <p class="mt-4 font-bold text-purple-300 group-hover:text-purple-100">Loja Virtual</p>
+                </div>
+                <div class="image-hover-container group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg border border-purple-900/50">
+                        <img src="http://static.photos/technology/640x360/2" alt="Landing Page" class="image-hover w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                         <div class="absolute inset-0 bg-purple-900/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <p class="mt-4 font-bold text-purple-300 group-hover:text-purple-100">Landing Page</p>
+                </div>
+                <div class="image-hover-container group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg border border-purple-900/50">
+                        <img src="http://static.photos/technology/640x360/3" alt="Painel de Controle" class="image-hover w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                         <div class="absolute inset-0 bg-purple-900/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <p class="mt-4 font-bold text-purple-300 group-hover:text-purple-100">Painel de Controle</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="offer" class="py-20 px-4 bg-[#050505] relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-purple-900/20 to-black pointer-events-none"></div>
+
+        <div class="container mx-auto max-w-4xl text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">Acesso <span class="text-fuchsia-500">VITALÍCIO</span> ao Método Completo</h2>
+            <p class="text-xl mb-12 text-gray-400">Esqueça mensalidades. Você paga uma vez (valor de um lanche) e economiza milhares de reais pro resto da vida.</p>
+            
+            <div class="bg-gray-900 text-white p-8 md:p-12 rounded-2xl shadow-[0_0_50px_rgba(168,85,247,0.25)] border border-purple-500/30 max-w-md mx-auto transform hover:scale-105 transition-transform duration-300">
+                <div class="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-400 mb-2 neon-text">R$ 24,99</div>
+                <div class="text-lg text-gray-500 line-through mb-8">De: R$ 97,00</div>
+                <p class="mb-8 text-purple-200 font-medium tracking-wide">(Pagamento Único - Acesso Imediato)</p>
+                
+                <a href="#" class="block w-full bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-500 hover:to-fuchsia-500 text-white font-bold py-5 px-8 rounded-full text-lg shadow-[0_0_20px_rgba(192,38,211,0.5)] animate-pulse">
+                    GARANTIR MINHA VAGA AGORA
                 </a>
-                <div class="mt-4 flex items-center justify-center">
-                    <i data-feather="lock" class="mr-2"></i>
+                <div class="mt-6 flex items-center justify-center text-sm text-gray-400">
+                    <i data-feather="lock" class="mr-2 w-4 h-4"></i>
                     <span>Compra 100% Segura e Garantida</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="py-16 px-4 bg-gray-100">
+    <section class="py-16 px-4 bg-black">
         <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl font-bold text-center mb-12">Dúvidas? Eu respondo.</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Dúvidas? <span class="text-purple-500">Eu respondo.</span></h2>
             
             <div class="space-y-4">
-                <div class="faq-item bg-white p-6 rounded-lg shadow">
-                    <button class="faq-question flex justify-between items-center w-full text-left font-bold text-lg">
+                <div class="faq-item bg-gray-900 p-6 rounded-lg border border-gray-800">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-bold text-lg text-white hover:text-purple-400 transition-colors">
                         <span>A hospedagem é realmente grátis para sempre?</span>
-                        <i data-feather="chevron-down" class="faq-icon"></i>
+                        <i data-feather="chevron-down" class="faq-icon text-purple-500"></i>
                     </button>
-                    <div class="faq-answer mt-4 hidden">
+                    <div class="faq-answer mt-4 hidden text-gray-400">
                         <p>Sim! Vou te ensinar a utilizar plataformas robustas que oferecem planos gratuitos generosos e vitalícios, perfeitos para múltiplos projetos.</p>
                     </div>
                 </div>
                 
-                <div class="faq-item bg-white p-6 rounded-lg shadow">
-                    <button class="faq-question flex justify-between items-center w-full text-left font-bold text-lg">
+                <div class="faq-item bg-gray-900 p-6 rounded-lg border border-gray-800">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-bold text-lg text-white hover:text-purple-400 transition-colors">
                         <span>Preciso saber programação ou códigos?</span>
-                        <i data-feather="chevron-down" class="faq-icon"></i>
+                        <i data-feather="chevron-down" class="faq-icon text-purple-500"></i>
                     </button>
-                    <div class="faq-answer mt-4 hidden">
+                    <div class="faq-answer mt-4 hidden text-gray-400">
                         <p>Absolutamente não. O método utiliza Inteligência Artificial para gerar o código e as configurações são feitas através de cliques simples.</p>
                     </div>
                 </div>
                 
-                <div class="faq-item bg-white p-6 rounded-lg shadow">
-                    <button class="faq-question flex justify-between items-center w-full text-left font-bold text-lg">
-                        <span>Posso usar meu domínio .com.br que comprei no Registro.br (ou GoDaddy)?</span>
-                        <i data-feather="chevron-down" class="faq-icon"></i>
+                <div class="faq-item bg-gray-900 p-6 rounded-lg border border-gray-800">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-bold text-lg text-white hover:text-purple-400 transition-colors">
+                        <span>Posso usar meu domínio .com.br pago?</span>
+                        <i data-feather="chevron-down" class="faq-icon text-purple-500"></i>
                     </button>
-                    <div class="faq-answer mt-4 hidden">
+                    <div class="faq-answer mt-4 hidden text-gray-400">
                         <p>Com certeza. Há um módulo específico ensinando a conectar seu domínio personalizado (pago) na hospedagem gratuita.</p>
                     </div>
                 </div>
                 
-                <div class="faq-item bg-white p-6 rounded-lg shadow">
-                    <button class="faq-question flex justify-between items-center w-full text-left font-bold text-lg">
+                <div class="faq-item bg-gray-900 p-6 rounded-lg border border-gray-800">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-bold text-lg text-white hover:text-purple-400 transition-colors">
                         <span>Quanto tempo tenho de acesso ao curso?</span>
-                        <i data-feather="chevron-down" class="faq-icon"></i>
+                        <i data-feather="chevron-down" class="faq-icon text-purple-500"></i>
                     </button>
-                    <div class="faq-answer mt-4 hidden">
+                    <div class="faq-answer mt-4 hidden text-gray-400">
                         <p>O acesso é vitalício. Você pode assistir quando e onde quiser, quantas vezes for necessário.</p>
                     </div>
                 </div>
                 
-                <div class="faq-item bg-white p-6 rounded-lg shadow">
-                    <button class="faq-question flex justify-between items-center w-full text-left font-bold text-lg">
+                <div class="faq-item bg-gray-900 p-6 rounded-lg border border-gray-800">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-bold text-lg text-white hover:text-purple-400 transition-colors">
                         <span>Serve para quem nunca criou um site?</span>
-                        <i data-feather="chevron-down" class="faq-icon"></i>
+                        <i data-feather="chevron-down" class="faq-icon text-purple-500"></i>
                     </button>
-                    <div class="faq-answer mt-4 hidden">
+                    <div class="faq-answer mt-4 hidden text-gray-400">
                         <p>Sim, a didática é passo a passo, do zero absoluto até o site no ar.</p>
                     </div>
                 </div>
@@ -307,20 +330,38 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-12 px-4 bg-gray-900 text-white text-center">
+    <footer class="py-12 px-4 bg-black border-t border-purple-900/30 text-gray-400 text-center">
         <div class="container mx-auto">
             <div class="flex justify-center mb-6">
-                <div class="text-2xl font-bold">Won Ecosystem</div>
+                <div class="text-2xl font-bold text-white tracking-wider">Won <span class="text-purple-500">Ecosystem</span></div>
             </div>
-            <p class="mb-4">CNPJ: 12.345.678/0001-90</p>
-            <p>Todos os direitos reservados © 2024</p>
+            <p class="mb-4 text-sm">CNPJ: 12.345.678/0001-90</p>
+            <p class="text-sm">Todos os direitos reservados © 2024</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
     <script>
         feather.replace();
+        
+        // Simples script para o acordeão do FAQ (caso não esteja no script.js externo)
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('.faq-icon');
+                
+                // Toggle visibility
+                answer.classList.toggle('hidden');
+                
+                // Rotate icon
+                if (answer.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+                icon.style.transition = 'transform 0.3s';
+            });
+        });
     </script>
 </body>
 </html>
